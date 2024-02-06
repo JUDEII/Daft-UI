@@ -35,9 +35,21 @@ Cypress automatically creates screenshot of failed tests. They can be found in t
 The custom commands and methods can be found in the path `cypress/support/commands.js`
 
 ## CI/CD 
-CI/CD has been setup using github actions in the repository. That way, once a push is made, the pipeline is triggered and the test suite is run automatically.
+CI/CD has been setup using github actions in the repository. That way, once a push is made, the pipeline is triggered and the test suite is run automatically. 
 
 The yml file containing the cypress configurations can be found in the path `.github/workflows/ci.yml`. It includes sets of actions to take when the test passes and when it fails (e.g screenshots).
+Whenever the test fails, you will see the button to download screenshot
+
+To view the pipeline on github, click on the `Actions` button. See screenshots of the various stages below
+
+`job triggered`
+![imgs/job-triggered.png](imgs/job-triggered.png)
+
+`job running`
+![imgs/job-running.png](imgs/job-running.png)
+
+`job completed`
+![imgs/job-completed.png](imgs/job-completed.png)
 
 
 
