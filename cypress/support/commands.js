@@ -13,7 +13,6 @@ import "cypress-xpath";
 // ***********************************************
 //
 
-
 /*** validate texts method */
 Cypress.Commands.add("validateText", (val, elem) => {
   elem.then((element) => {
@@ -23,7 +22,6 @@ Cypress.Commands.add("validateText", (val, elem) => {
 });
 
 Cypress.Commands.add("resultExistCount", (text) => {
-  cy.log("the text is =>" + text);
   const parts = text.split(" ");
   const firstVal = parts[0];
   const numVal = parseInt(firstVal.replace(",", ""), 10);

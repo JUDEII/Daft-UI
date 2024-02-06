@@ -1,7 +1,8 @@
 class PropertiesPage {
   noResults = ".ZeroResults__HeaderText-sc-193ko9u-3";
   searchResultCountElement = 'h1[data-testid="search-h1"]';
-  successfulResults = "(//picture[contains(@data-testid, 'card-img')])[1]";
+  successfulResults =
+    '[data-testid="results"] > li:nth-child(2) > a > [data-testid="card-wrapper"] > .Cardstyled__ContentWrapper-nngi4q-1 > .Cardstyled__FlexImages-nngi4q-7 > [data-testid="image-container"] > .OverviewImage__ImageWrapper-sw56xf-0 > [data-testid="card-img"] > img';
   filterOption = '[data-testid="open-filters-modal"]';
   keywordSearchTextField = '[data-testid="terms-input-text"]';
   filterResultsButton = '[data-testid="filters-modal-show-results-button"]';
@@ -24,7 +25,7 @@ class PropertiesPage {
   }
 
   selectSearchResult() {
-    return cy.xpath(this.successfulResults).should("be.visible").click();
+    return cy.get(this.successfulResults).click();
   }
 
   getKeyword() {
